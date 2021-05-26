@@ -83,7 +83,6 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
             }
             else
                 CorrectlyConnected = true;
-            Debug.Log(CorrectlyConnected);
         }
         else if (!LineDrawn)
         {
