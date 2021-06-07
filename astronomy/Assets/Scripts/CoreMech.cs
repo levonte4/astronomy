@@ -1,27 +1,15 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
 
 public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    public bool LevelCompleted = false;
     public CompleteScene complete;
     public bool CorrectlyConnected = false;
     public Material mat;
     public int Time = 0;
     public bool LineDrawn = false;
-    public Sprite yellowStar;
-    public Sprite whiteStar;
-    public SpriteRenderer spriteRenderer;
-
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        PlayerPrefs.SetInt("IsFirstLaunch", 1);
-        PlayerPrefs.Save();
-    }
 
     void Update()
     {
@@ -29,10 +17,8 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             LineRenderer line = gameObject.AddComponent<LineRenderer>();
             line.material = mat;
-            line.startColor = new Color(1f, 0.945f, 0.463f, 1);
-            line.endColor = new Color(1f, 0.945f, 0.463f, 1);
-            line.startWidth = 0.15f;
-            line.endWidth = 0.15f;
+            line.startWidth = 0.2F;
+            line.endWidth = 0.2F;
             line.positionCount = 2;
         }
         else
@@ -52,7 +38,6 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
                     Destroy(line);
                     LineDrawn = false;
                     CorrectlyConnected = false;
-                    spriteRenderer.sprite = whiteStar;
                 }
             }
             if (Input.GetMouseButtonUp(0))
@@ -63,7 +48,6 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
         if (complete.Completed)
         {
             Destroy(this.gameObject);
-            LevelCompleted = true;
         }
     }
 
@@ -75,7 +59,7 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
             line.SetPosition(0, this.gameObject.transform.position);
             line.SetPosition(1, Camera.main.ScreenToWorldPoint(new Vector3(data.position.x, data.position.y, 1)));
             if (data.hovered.Count == 1)
-            {
+            { 
                 line.SetPosition(0, this.gameObject.transform.position);
                 line.SetPosition(1, data.hovered[0].transform.position);
             }
@@ -92,7 +76,6 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
             line.SetPosition(0, pos1);
             line.SetPosition(1, pos2);
             LineDrawn = true;
-            spriteRenderer.sprite = yellowStar;
             if (!IsLineCorrect(pos1, pos2))
             {
                 line.startColor = Color.red;
@@ -106,7 +89,6 @@ public class CoreMech : MonoBehaviour, IDragHandler, IEndDragHandler
             LineRenderer line = GetComponent<LineRenderer>();
             Destroy(line);
             LineDrawn = false;
-            spriteRenderer.sprite = whiteStar;
         }
     }
 

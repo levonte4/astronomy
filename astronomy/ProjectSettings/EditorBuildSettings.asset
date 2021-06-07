@@ -14,19 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: e5b54545646dac747bf70a7a30605c73
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/next.unity
+    guid: 349643998821b2e4883963e5ad08aff1
   - enabled: 1
     path: Assets/Scenes/Unicorn.unity
     guid: b725392c656bc724bacc666cbce3814e
-  - enabled: 1
-    path: Assets/Scenes/CompletedUnicorn.unity
-    guid: 41f9ab6301195254d8f0462969a2e03a
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Dragon.unity
-    guid: 5f297674c20cbc549b1b39e5483889cb
   m_configObjects: {}
