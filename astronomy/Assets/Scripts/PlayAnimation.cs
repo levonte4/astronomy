@@ -12,6 +12,13 @@ public class PlayAnimation : MonoBehaviour
     public Button Volume;
     public Button Open;
     public Button Next;
+    public Image Text;
+    public AudioSource sound;
+
+    void Start()
+    {
+        sound = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -22,6 +29,8 @@ public class PlayAnimation : MonoBehaviour
             Volume.transform.localPosition = new Vector3(-950, -400, 1);
             Open.transform.localPosition = new Vector3(950, 400, 1);
             Next.transform.localPosition = new Vector3(950, -400, 1);
+            Text.transform.localPosition = new Vector3(589.83f, 386.71f, 1);
+            sound.Play();
         }
     }
 }

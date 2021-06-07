@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 177920333}
   - component: {fileID: 177920334}
   m_Layer: 5
-  m_Name: Button 2
+  m_Name: DragonButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,13 +209,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 985214595}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoad, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: Scene2
           m_BoolArgument: 0
@@ -409,6 +409,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+<<<<<<< Updated upstream
 --- !u!1 &314019686
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c1b13727a79054e8835e6312a92375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Stashed changes
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +701,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &840239348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 840239349}
+  - component: {fileID: 840239350}
+  m_Layer: 0
+  m_Name: ButtonsScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &840239349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840239348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 558.8077, y: 314.07065, z: 28429.848}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840239350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840239348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15038005e2b22e4f947e2515047f5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptHolder: {fileID: 0}
+  Script: {fileID: 0}
+  Completed: 0
+  Flag: 0
+  FinalUnicorn: {fileID: 21300000, guid: 11cb65a633d27dc4bab614cf05a6c322, type: 3}
+  Dragon: {fileID: 21300000, guid: 20d8998d06a341b4b88fefe47a87404e, type: 3}
 --- !u!1 &985214594
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcd27a14c1f4cf41874a8c67ddae35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsFirstLaunch: 1
 --- !u!4 &985214596
 Transform:
   m_ObjectHideFlags: 0
@@ -756,7 +809,7 @@ GameObject:
   - component: {fileID: 1526673525}
   - component: {fileID: 1526673524}
   m_Layer: 5
-  m_Name: Button 1
+  m_Name: UnicornButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -826,13 +879,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 985214595}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoad, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: Scene2
           m_BoolArgument: 0
@@ -945,7 +998,7 @@ GameObject:
   - component: {fileID: 1630877479}
   - component: {fileID: 1630877478}
   m_Layer: 5
-  m_Name: Button 3
+  m_Name: LastButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,7 +1067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 985214595}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Scene, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 3
@@ -1226,7 +1279,7 @@ GameObject:
   - component: {fileID: 1789667424}
   - component: {fileID: 1789667425}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1296,7 +1349,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 985214595}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoad, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 3
         m_Arguments:
@@ -1463,3 +1516,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829910070}
   m_CullTransparentMesh: 1
+--- !u!1 &1904557479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904557481}
+  - component: {fileID: 1904557480}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1904557480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904557479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e88577cf4ec9094b810e8c3a66e113f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMusic: {fileID: 8645822268471999373, guid: c3ad1a9bd18822548ac67fe93418e0de, type: 3}
+  objs1: []
+--- !u!4 &1904557481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904557479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1201.829, y: 350.83936, z: 38153.098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

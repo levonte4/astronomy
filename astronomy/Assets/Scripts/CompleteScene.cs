@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CompleteScene : MonoBehaviour
 {
+    public bool FirstCompletion = true;
     public bool Flag = false;
     public bool Completed = false;
     public CoreMech star;
@@ -21,7 +23,14 @@ public class CompleteScene : MonoBehaviour
             star4.CorrectlyConnected & star5.CorrectlyConnected & star6.CorrectlyConnected & star7.CorrectlyConnected & !Flag)
         {
             Flag = true;
-            Completed = true;
+            if (!PlayerPrefs.HasKey("FirstLvlCompleted"))
+            {
+                Completed = true;
+                PlayerPrefs.SetInt("FirstLvlCompleted", 1);
+                PlayerPrefs.Save();
+            }
+            else
+                SceneManager.LoadScene(3);
         }
     }
 }

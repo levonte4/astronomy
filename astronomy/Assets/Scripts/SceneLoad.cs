@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneLoad : MonoBehaviour
+public class Scene : MonoBehaviour
 {
     public bool IsFirstLaunch = true;
 
