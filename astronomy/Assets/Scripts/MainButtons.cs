@@ -40,7 +40,5 @@ public class MainButtons : MonoBehaviour
             dragonButton.image.sprite = Dragon;
             Destroy(ScriptHolder);
         }
-
-        Debug.Log(PlayerPrefs.HasKey("FirstLvlCompleted"));
     }
 }
