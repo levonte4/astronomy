@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayAnimation : MonoBehaviour
+public class PlayAnimation1 : MonoBehaviour
 {
     public Animator animator;
-    public CompleteScene completeScene;
+    public CompleteScene1 completeScene;
     public Canvas canvas;
     public bool Flag = false;
     public Button Volume;

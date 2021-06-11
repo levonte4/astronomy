@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CompleteScene : MonoBehaviour
 {
-    public bool FirstCompletion = true;
     public bool Flag = false;
     public bool Completed = false;
     public CoreMech star;
