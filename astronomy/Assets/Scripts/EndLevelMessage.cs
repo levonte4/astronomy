@@ -24,12 +24,14 @@ public class EndLevelMessage : MonoBehaviour
         Button next = image.Find("Next").GetComponent<Button>();
         retry.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         });
         menu.onClick.AddListener(() =>
         {
             SceneManager.LoadScene(0);
         });
+        if ((SceneManager.GetActiveScene().buildIndex == 4))
+            next.interactable = false;
         next.onClick.AddListener(() =>
         {
             SceneManager.LoadScene(3);
