@@ -11,8 +11,7 @@ public class SoundOFF : MonoBehaviour
         mySound = GetComponent<btnSound>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ClickSound()
     {
         mySound.enabled = !mySound.enabled;
     }
