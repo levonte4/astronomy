@@ -38,25 +38,42 @@ public class CoreMech1 : MonoBehaviour, IDragHandler, IEndDragHandler
             LineRenderer line = GetComponent<LineRenderer>();
             var pos1 = line.GetPosition(0);
             var pos2 = line.GetPosition(1);
-            var pointerPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var delta = 0.3;
-            if ((Math.Abs(pointerPos.x - (pos1.x + pos2.x) / 2) < delta) &
-                (Math.Abs(pointerPos.y - (pos1.y + pos2.y) / 2) < delta) &
-                Input.GetMouseButton(0)) //Input.touchCount > 0 for mobiles
+            if (Input.touchCount > 0)
             {
-                Time++;
-                if (Time > 200)
+                if ((Math.Abs(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x - (pos1.x + pos2.x) / 2) < delta) &
+                (Math.Abs(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y - (pos1.y + pos2.y) / 2) < delta))
                 {
-                    Destroy(line);
-                    LineDrawn = false;
-                    CorrectlyConnected = false;
-                    spriteRenderer.sprite = whiteStar;
+                    Time++;
+                    if (Time > 30)
+                    {
+                        Destroy(line);
+                        LineDrawn = false;
+                        CorrectlyConnected = false;
+                        spriteRenderer.sprite = whiteStar;
+                    }
                 }
+                if (Input.GetMouseButtonUp(0))
+                    Time = 0;
             }
-            if (Input.GetMouseButtonUp(0))
-            {
-                Time = 0;
-            }
+            //For PC's
+            //var pointerPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //var delta = 0.3;
+            //if ((Math.Abs(pointerPos.x - (pos1.x + pos2.x) / 2) < delta) &
+            //    (Math.Abs(pointerPos.y - (pos1.y + pos2.y) / 2) < delta) &
+            //    Input.GetMouseButton(0))
+            //{
+            //    Time++;
+            //    if (Time > 30)
+            //    {
+            //        Destroy(line);
+            //        LineDrawn = false;
+            //        CorrectlyConnected = false;
+            //        spriteRenderer.sprite = whiteStar;
+            //    }
+            //}
+            //if (Input.GetMouseButtonUp(0))
+            //    Time = 0;
         }
         if (complete.Completed)
         {
