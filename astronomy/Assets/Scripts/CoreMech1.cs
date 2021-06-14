@@ -15,10 +15,12 @@ public class CoreMech1 : MonoBehaviour, IDragHandler, IEndDragHandler
     public Sprite yellowStar;
     public Sprite whiteStar;
     public SpriteRenderer spriteRenderer;
+    public AudioSource sound;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        sound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -107,6 +109,7 @@ public class CoreMech1 : MonoBehaviour, IDragHandler, IEndDragHandler
             line.SetPosition(0, pos1);
             line.SetPosition(1, pos2);
             LineDrawn = true;
+            sound.Play();
             spriteRenderer.sprite = yellowStar;
             if (!IsLineCorrect(pos1, pos2))
             {

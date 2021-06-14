@@ -26,8 +26,8 @@ public class PlayAnimation1 : MonoBehaviour
         {
             Flag = true;
             animator.SetBool("LevelCompleted", true);
-            Volume.transform.localPosition = new Vector3(-950, -400, 1);
-            Next.transform.localPosition = new Vector3(950, -400, 1);
+            Volume.transform.localPosition = new Vector3(-950, -300, 1);
+            Next.transform.localPosition = new Vector3(950, -350, 1);
             Text.transform.localPosition = new Vector3(589.83f, 386.71f, 1);
             sound.Play();
         }
