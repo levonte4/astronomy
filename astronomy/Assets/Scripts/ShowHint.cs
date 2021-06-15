@@ -9,13 +9,22 @@ public class ShowHint : MonoBehaviour
     public GameObject UnicornHint;
     public GameObject DragonHint;
     public Button Open;
+    public bool soundFlag;
+    public AudioSource myFX;
+    public AudioClip clickFX;
 
     void Start()
     {
+        soundFlag = PlayerPrefs.GetInt("soundFlag") == 1;
         Open.onClick.AddListener(() =>
         {
             Show();
         });
+    }
+    public void SoundBtn()
+    {
+        if (soundFlag)
+            myFX.PlayOneShot(clickFX);
     }
 
     public void Show()
@@ -27,6 +36,7 @@ public class ShowHint : MonoBehaviour
             Button next = image.Find("Next").GetComponent<Button>();
             next.onClick.AddListener(() =>
             {
+                SoundBtn();
                 Destroy(unicornHint);
             });
         }
@@ -37,6 +47,7 @@ public class ShowHint : MonoBehaviour
             Button next = image.Find("Next").GetComponent<Button>();
             next.onClick.AddListener(() =>
             {
+                SoundBtn();
                 Destroy(dragonHint);
             });
         }

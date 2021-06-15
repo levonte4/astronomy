@@ -5,10 +5,11 @@ using UnityEngine;
 public class BackgroundMusic : MonoBehaviour
 {
     private static BackgroundMusic backgroundMusic;
+    public bool musicFlag;
 
     private void Awake()
     {
-        if (backgroundMusic == null)
+        if (backgroundMusic == null && musicFlag)
         {
             backgroundMusic = this;
             DontDestroyOnLoad(backgroundMusic);

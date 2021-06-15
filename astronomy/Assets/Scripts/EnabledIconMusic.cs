@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnabledIcon0 : MonoBehaviour
+public class EnabledIconMusic : MonoBehaviour
 {
     [SerializeField] Image soundOnIcon;
     [SerializeField] Image soundOffIcon;
-    private bool muted = false;
+    public bool musicFlag = true;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (!PlayerPrefs.HasKey("muted"))
+        if (!PlayerPrefs.HasKey("musicFlag"))
         {
-            PlayerPrefs.SetInt("muted", 0);
+            PlayerPrefs.SetInt("musicFlag", 0);
             Load();
         }
 
@@ -22,21 +21,14 @@ public class EnabledIcon0 : MonoBehaviour
         {
             Load();
         }
-
         UpdateButtonIcon();
     }
 
     public void OnButtonPress()
     {
-        if (muted == false)
-        {
-            muted = true;
-        }
+        musicFlag = !musicFlag;
 
-        else
-        {
-            muted = false;
-        }
+        GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().enabled = musicFlag;
 
         Save();
         UpdateButtonIcon();
@@ -44,7 +36,7 @@ public class EnabledIcon0 : MonoBehaviour
 
     private void UpdateButtonIcon()
     {
-        if (muted == false)
+        if (musicFlag == true)
         {
             soundOnIcon.enabled = true;
             soundOffIcon.enabled = false;
@@ -59,11 +51,11 @@ public class EnabledIcon0 : MonoBehaviour
 
     private void Load()
     {
-        muted = PlayerPrefs.GetInt("muted") == 1;
+        musicFlag = PlayerPrefs.GetInt("musicFlag") == 1;
     }
 
     private void Save()
     {
-        PlayerPrefs.SetInt("muted", muted ? 1 : 0);
+        PlayerPrefs.SetInt("musicFlag", musicFlag ? 1 : 0);
     }
 }

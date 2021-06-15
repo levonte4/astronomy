@@ -949,6 +949,7 @@ GameObject:
   - component: {fileID: 649760747}
   - component: {fileID: 649760746}
   - component: {fileID: 649760745}
+  - component: {fileID: 649760748}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -1083,6 +1084,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 649760748}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &649760745
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1207,6 +1220,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundOnIcon: {fileID: 890807085}
   soundOffIcon: {fileID: 863112839}
+--- !u!114 &649760748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649760740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!1001 &684830157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1301,6 +1329,9 @@ MonoBehaviour:
   PauseButton: {fileID: 1557737373}
   Flag: 0
   Script: {fileID: 806277828}
+  soundFlag: 0
+  myFX: {fileID: 1557737377}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
 --- !u!4 &758456986
 Transform:
   m_ObjectHideFlags: 0
@@ -1859,6 +1890,9 @@ MonoBehaviour:
   UnicornHint: {fileID: 8123888177212809202, guid: 77665895d2e4e8b48a5979bfad3e141b, type: 3}
   DragonHint: {fileID: 0}
   Open: {fileID: 1528866010}
+  soundFlag: 0
+  myFX: {fileID: 1557737377}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
 --- !u!4 &987604864
 Transform:
   m_ObjectHideFlags: 0
@@ -2415,6 +2449,7 @@ GameObject:
   - component: {fileID: 1528866009}
   - component: {fileID: 1528866008}
   - component: {fileID: 1528866010}
+  - component: {fileID: 1528866011}
   m_Layer: 5
   m_Name: Open
   m_TagString: Untagged
@@ -2522,7 +2557,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528866008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1528866011}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1528866011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528866006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 1557737377}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!1 &1557737372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2597,8 @@ GameObject:
   - component: {fileID: 1557737375}
   - component: {fileID: 1557737374}
   - component: {fileID: 1557737373}
+  - component: {fileID: 1557737378}
+  - component: {fileID: 1557737377}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -2585,7 +2649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1557737374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1557737378}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1557737374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,9 +2716,120 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -950, y: 400}
+  m_AnchoredPosition: {x: -1027, y: 526}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &1557737377
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557737372}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 11.513961
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1557737378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557737372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 1557737377}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!114 &1617437746 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9206036885750758285, guid: 9adecb826537fd046a04604068c13e01, type: 3}
@@ -2990,6 +3177,7 @@ GameObject:
   - component: {fileID: 1823874634}
   - component: {fileID: 1823874633}
   - component: {fileID: 1823874632}
+  - component: {fileID: 1823874636}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -3040,7 +3228,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1823874633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1823874636}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1823874633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3098,6 +3298,21 @@ RectTransform:
   m_AnchoredPosition: {x: 10000, y: -400}
   m_SizeDelta: {x: 200, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1823874636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823874631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!1 &1949272958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,6 +3347,9 @@ MonoBehaviour:
   Instruction1: {fileID: 643486209371543187, guid: 5b81491cf86b42b4e964ceae9811e574, type: 3}
   Instruction2: {fileID: 3107482683797054699, guid: fc80b77e90bb1b5469a70c94ded077a4, type: 3}
   Instruction3: {fileID: 357195477428059322, guid: 093518d42c9d5994a82aecb188975f9a, type: 3}
+  soundFlag: 0
+  myFX: {fileID: 1557737377}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
 --- !u!4 &1949272961
 Transform:
   m_ObjectHideFlags: 0

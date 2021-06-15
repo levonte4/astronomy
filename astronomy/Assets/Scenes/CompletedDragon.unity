@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 649760746}
   - component: {fileID: 649760745}
   - component: {fileID: 649760747}
+  - component: {fileID: 649760748}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -609,6 +610,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 649760748}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &649760745
 AudioSource:
   m_ObjectHideFlags: 0
@@ -733,6 +746,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundOnIcon: {fileID: 1344990979}
   soundOffIcon: {fileID: 1930462263}
+--- !u!114 &649760748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649760740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!1 &1078540297
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1014,7 @@ GameObject:
   - component: {fileID: 1528866009}
   - component: {fileID: 1528866008}
   - component: {fileID: 1528866010}
+  - component: {fileID: 1528866011}
   m_Layer: 5
   m_Name: Open
   m_TagString: Untagged
@@ -1093,7 +1122,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528866008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1528866011}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1528866011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528866006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!1 &1823874631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1162,7 @@ GameObject:
   - component: {fileID: 1823874634}
   - component: {fileID: 1823874633}
   - component: {fileID: 1823874632}
+  - component: {fileID: 1823874636}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -1156,7 +1213,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1823874633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1823874636}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1823874633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,6 +1283,21 @@ RectTransform:
   m_AnchoredPosition: {x: 950, y: -350}
   m_SizeDelta: {x: 200, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1823874636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823874631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!1 &1833837426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1480,9 @@ MonoBehaviour:
   UnicornHint: {fileID: 8123888177212809202, guid: 77665895d2e4e8b48a5979bfad3e141b, type: 3}
   DragonHint: {fileID: 3510368346216286592, guid: daad406df82538f46aefff4ef8fd71c9, type: 3}
   Open: {fileID: 1528866010}
+  soundFlag: 0
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
 --- !u!4 &2009649236
 Transform:
   m_ObjectHideFlags: 0
@@ -1422,6 +1509,7 @@ GameObject:
   - component: {fileID: 2123120027}
   - component: {fileID: 2123120026}
   - component: {fileID: 2123120025}
+  - component: {fileID: 2123120029}
   m_Layer: 5
   m_Name: Retry
   m_TagString: Untagged
@@ -1472,7 +1560,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2123120026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123120029}
+        m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2123120026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,3 +1630,18 @@ RectTransform:
   m_AnchoredPosition: {x: -950, y: 400}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2123120029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123120024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7cefaeea4b23b4f9b21ca6513686af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFX: {fileID: 649760745}
+  clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0

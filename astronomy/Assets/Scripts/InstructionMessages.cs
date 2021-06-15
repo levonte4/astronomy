@@ -10,14 +10,23 @@ public class InstructionMessages : MonoBehaviour
     public GameObject Instruction1;
     public GameObject Instruction2;
     public GameObject Instruction3;
+    public bool soundFlag;
+    public AudioSource myFX;
+    public AudioClip clickFX;
 
     void Update()
     {
+        soundFlag = PlayerPrefs.GetInt("soundFlag") == 1;
         if (!Flag & sceneLoad.IsFirstLaunch)
         {
             Flag = true;
             ShowInstructions();
         }
+    }
+    public void SoundBtn()
+    {
+        if (soundFlag)
+            myFX.PlayOneShot(clickFX);
     }
 
     public void ShowInstructions()
@@ -27,18 +36,21 @@ public class InstructionMessages : MonoBehaviour
         Button next1 = image1.Find("Next").GetComponent<Button>();
         next1.onClick.AddListener(() =>
         {
+            SoundBtn();
             GameObject instruction2 = Instantiate(Instruction2);
             Destroy(instruction1);
             Transform image2 = instruction2.transform.Find("Image");
             Button next2 = image2.Find("Next").GetComponent<Button>();
             next2.onClick.AddListener(() =>
             {
+                SoundBtn();
                 GameObject instruction3 = Instantiate(Instruction3);
                 Destroy(instruction2);
                 Transform image3 = instruction3.transform.Find("Image");
                 Button next3 = image3.Find("Next").GetComponent<Button>();
                 next3.onClick.AddListener(() =>
                 {
+                    SoundBtn();
                     Destroy(instruction3);
                 });
             });

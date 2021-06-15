@@ -10,9 +10,13 @@ public class Pause : MonoBehaviour
     public Button PauseButton;
     public bool Flag = false;
     public CompleteScene Script;
+    public bool soundFlag;
+    public AudioSource myFX;
+    public AudioClip clickFX;
 
     void Start()
     {
+        soundFlag = PlayerPrefs.GetInt("soundFlag") == 1;
         PauseButton.onClick.AddListener(() =>
         {
             ShowPauseMenu();
@@ -28,6 +32,12 @@ public class Pause : MonoBehaviour
         }
     }
 
+    public void SoundBtn()
+    {
+        if(soundFlag)
+            myFX.PlayOneShot(clickFX);
+    }
+
     public void ShowPauseMenu()
     {
         GameObject pauseMenu = Instantiate(Template);
@@ -37,14 +47,17 @@ public class Pause : MonoBehaviour
         Button menu = image.Find("Menu").GetComponent<Button>();
         resume.onClick.AddListener(() =>
         {
+            SoundBtn();
             Destroy(pauseMenu);
         });
         retry.onClick.AddListener(() =>
         {
+            SoundBtn();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         });
         menu.onClick.AddListener(() =>
         {
+            SoundBtn();
             SceneManager.LoadScene(0);
         });
     }

@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class MusicBG : MonoBehaviour
 {
-    public GameObject BGMusic;  
+    public GameObject BGMusic;
     private AudioSource audioSrc;
     public GameObject[] objs1;
+    public bool musicFlag;
 
     void Awake()
     {

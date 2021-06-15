@@ -738,6 +738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myFX: {fileID: 1006991336}
   clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!114 &1006991339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,18 +795,6 @@ MonoBehaviour:
           m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
 --- !u!114 &1006991340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1022,7 +1011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1103835804}
-  - component: {fileID: 1103835803}
+  - component: {fileID: 1103835805}
   m_Layer: 0
   m_Name: SoundIcon
   m_TagString: Untagged
@@ -1030,20 +1019,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1103835803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103835802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0af521e7329a5c489be475554630711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundOnIcon: {fileID: 1602685283}
-  soundOffIcon: {fileID: 359742097}
 --- !u!4 &1103835804
 Transform:
   m_ObjectHideFlags: 0
@@ -1058,6 +1033,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1103835805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103835802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af952774e4812e24ea12cc0b554b8f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOnIcon: {fileID: 359742097}
+  soundOffIcon: {fileID: 1602685283}
+  soundFlag: 1
 --- !u!1 &1141551486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1141551488}
-  - component: {fileID: 1141551487}
+  - component: {fileID: 1141551489}
   m_Layer: 0
   m_Name: MusicIcon
   m_TagString: Untagged
@@ -1075,20 +1065,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1141551487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141551486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0af521e7329a5c489be475554630711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundOnIcon: {fileID: 347560702}
-  soundOffIcon: {fileID: 1010341676}
 --- !u!4 &1141551488
 Transform:
   m_ObjectHideFlags: 0
@@ -1103,6 +1079,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141551489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141551486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4c1c8e81d5c0443ae48b2b96742509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOnIcon: {fileID: 347560702}
+  soundOffIcon: {fileID: 1010341676}
+  musicFlag: 0
 --- !u!1 &1179724231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myFX: {fileID: 1006991336}
   clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!114 &1944008946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,16 +1490,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141551487}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+      - m_Target: {fileID: 1141551489}
+        m_TargetAssemblyTypeName: EnabledIconMusic, Assembly-CSharp
         m_MethodName: OnButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene2
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1944008948
@@ -1575,31 +1567,7 @@ MonoBehaviour:
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1944438049}
-          m_TargetAssemblyTypeName: btnSound, Assembly-CSharp
-          m_MethodName: ClickSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 0
-        - m_Target: {fileID: 1411311341}
-          m_TargetAssemblyTypeName: SoundOFF, Assembly-CSharp
-          m_MethodName: ClickSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 0
+        m_Calls: []
 --- !u!114 &1944438049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,6 +1582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myFX: {fileID: 1006991336}
   clickFX: {fileID: 8300000, guid: 11f0bcda44cb1c94aa76ee8cd1707b3c, type: 3}
+  soundFlag: 0
 --- !u!114 &1944438050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1658,8 +1627,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1103835803}
-        m_TargetAssemblyTypeName: EnabledIcon, Assembly-CSharp
+      - m_Target: {fileID: 1103835805}
+        m_TargetAssemblyTypeName: EnabledIconSound, Assembly-CSharp
         m_MethodName: OnButtonPress
         m_Mode: 1
         m_Arguments:

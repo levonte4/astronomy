@@ -1,24 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class btnSound : MonoBehaviour
 {
     public AudioSource myFX;
     public AudioClip clickFX;
-    public void ClickSound()
-    {
-        myFX.PlayOneShot(clickFX);
-    }
-    // Start is called before the first frame update
+    public bool soundFlag;
     void Start()
     {
-        
-    }
+        if (!PlayerPrefs.HasKey("soundFlag"))
+        {
+            PlayerPrefs.SetInt("soundFlag", 0);
+            Load();
+        }
 
-    // Update is called once per frame
-    void Update()
+        else
+        {
+            Load();
+        }
+    }
+    public void ClickSound()
     {
-        
+        if(soundFlag)
+            myFX.PlayOneShot(clickFX);
+    }
+    private void Load()
+    {
+        soundFlag = PlayerPrefs.GetInt("soundFlag") == 1;
     }
 }
